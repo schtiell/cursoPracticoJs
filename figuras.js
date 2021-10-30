@@ -5,8 +5,6 @@ console.log('Llegue al archivo figuras.js');
 //Crea un nuevo grupo, indentando todos los mensajes subsecuentes en un nuevo nivel. Para retroceder un nivel, se utiliza groupEnd().
 console.group("Cuadrado");
 
-//const ladoCuadrado = 5;
-
 function perimetroCuadrado (lado) {
     return lado * 4;
 }
@@ -15,9 +13,6 @@ function areaCuadrado(lado) {
     return lado * lado  ;
 }
 
-
-perimetroCuadrado();
-areaCuadrado();
 
 //console.log(`Los lados del cuadrado miden: ${ladoCuadrado} cm`);
 console.log(`El perímetro del cuadrado es: ${perimetroCuadrado()} cm`);
@@ -90,3 +85,22 @@ function areaCirculo(radio) {
 
 //Fin del grupo circulo
 console.groupEnd();
+
+
+//Interacción con el HTML
+
+function calcularPerimetroCuadrado() {
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+
+    const  perimetro = perimetroCuadrado(value);
+    alert(perimetro);
+}
+
+function calcularAreaCuadrado() {
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+
+    const  area = areaCuadrado(value);
+    alert(area);
+}
