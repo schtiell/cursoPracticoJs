@@ -10,11 +10,28 @@ function calcularPrecioConDescuento (precio, descuento) {
 
 function onClickPriceDiscount() {
     const inputPrice = document.getElementById("InputPrice").value;
-    const inputDiscount = document.getElementById("InputDiscount").value;
+    const inputCoupon = document.getElementById("InputDiscount").value;
 
-    const precioConDescuento = calcularPrecioConDescuento(inputPrice, inputDiscount);
-    
+    const coupons = ["diez", "quince", "veinticinco", "treinta y cinco"];
+
+    const precioConDescuento;
     const ResultPrice = document.getElementById("ResultPrice");
-    ResultPrice.innerText = `El precio con descuento es: $${precioConDescuento} dls`;
 
+    if (inputCoupon === coupons[0]){
+        precioConDescuento = calcularPrecioConDescuento(inputPrice, 10);
+        ResultPrice.innerText = `El precio con descuento es: $${precioConDescuento} dls`;
+    }else if (inputCoupon === coupons[1]){
+        precioConDescuento = calcularPrecioConDescuento(inputPrice, 15);
+        ResultPrice.innerText = `El precio con descuento es: $${precioConDescuento} dls`;
+    }else if (inputCoupon === coupons[2]){
+        precioConDescuento = calcularPrecioConDescuento(inputPrice, 25);
+        ResultPrice.innerText = `El precio con descuento es: $${precioConDescuento} dls`;
+    }else if (inputCoupon === coupons[3]){
+        precioConDescuento = calcularPrecioConDescuento(inputPrice, 35);
+        ResultPrice.innerText = `El precio con descuento es: $${precioConDescuento} dls`;
+    }else if (inputCoupon === null || inputCoupon === undefined){
+        ResultPrice.innerText = `El cupon indicado no tiene descuento`;
+    }else{
+        ResultPrice.innerText = `El cupon indicado no es valido`;
+    }
 }
