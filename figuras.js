@@ -23,8 +23,8 @@ function perimetroTriangulo(lado1, lado2, base) {
     return lado1 + lado2 + base;
 }
 
-function areaTriangulo (base, altura) { 
-    return  (base * altura)/2; 
+function areaTriangulo (base, altura) {
+    return  (base * altura)/2;
 }
 
 //Fin del grupo triangulo
@@ -73,33 +73,52 @@ function calcularAreaCuadrado() {
 
 //Funciones triangulo
 
-function calcularAltura (lado1, lado2,base) {
-    if (lado1 == lado2 || lado1 != base) {
-        return "El triangulo es isóseles";
+function datosParaCalculos(){
+    let lado1 = parseInt(document.getElementById("InputTrianguloLado1").value);
+    let lado2 = parseInt(document.getElementById("InputTrianguloLado2").value);
+    let base = parseInt(document.getElementById("InputTrianguloBase").value);
+
+    var arreglo = [];
+    arreglo = [lado1,lado2,base]
+    return arreglo;
+}
+
+function calcularAlturaTriangulo () {
+
+    let datos = datosParaCalculos();
+
+    if (datos[0] != datos[1]) {
+        console.error("El lado 1 y el lado 2 no son iguales por lo tanto no se puede calcular la altura");
     }else{
-        
+        let hipotenusa_T1 = datos[0];
+        let base_T1 = datos[2]/2;
+
+        let altura = (Math.pow(hipotenusa_T1, 2) - Math.pow(base_T1, 2));
+
+        let alturaT = Math.sqrt(altura)
+
+        console.log(Math.round(alturaT));
+
+        return alturaT;
     }
 }
 
 function calcularPerimetroTriangulo () {
-    const lado1 = parseInt(document.getElementById("InputTrianguloLado1").value);
-    const lado2 = parseInt(document.getElementById("InputTrianguloLado2").value);
-    const base = parseInt(document.getElementById("InputTrianguloBase").value);
 
-    const perimetroT = perimetroTriangulo(lado1, lado2, base);
+    let datos = datosParaCalculos();
+
+    const perimetroT = perimetroTriangulo(datos[0],datos[1],datos[2]);
+
     alert(perimetroT);
-    
-    alert(esIsoseles(lado1, lado2, base));
 }
 
 function calcularAreaTriangulo () {
-    const lado1 = document.getElementById("InputTrianguloLado1").value;
-    const lado2 = document.getElementById("InputTrianguloLado2").value;
-    const base = document.getElementById("InputTrianguloBase").value;
-    const altura = document.getElementById("InputTrianguloAltura").value;
+
+    let base = datosParaCalculos();
+    base = base[2];
+
+    const altura = calcularAlturaTriangulo();
 
     const areaT = areaTriangulo(base, altura);
-    alert(areaT);
-
-    alert(esIsoseles(lado1, lado2, base));
+    alert(Math.round(areaT));
 }
