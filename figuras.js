@@ -122,3 +122,6 @@ function calcularAreaTriangulo () {
     const areaT = areaTriangulo(base, altura);
     alert(Math.round(areaT));
 }
+
+
+//Pendiente CIRCULO
