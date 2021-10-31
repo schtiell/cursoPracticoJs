@@ -150,9 +150,10 @@ De esta forma, no solo logramos reducir las líneas de código de nuestro progra
 
 ¡Te espero en la siguiente clase para que iniciemos nuestro tercer taller práctico del curso!
 
-## Taller 2: Porcentajes y descuentos
+## Taller 3: promedio, mediana y moda
 
 - Primer paso: definir las formulas.
 - Segundo paso: implementar las formulas en js
 - Tercer paso: crear las funciones.
 - Cuarto paso: integrar js y html
+
