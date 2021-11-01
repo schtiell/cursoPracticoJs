@@ -25,4 +25,4 @@ function calcularModa (lista) {
 
 }
 
-calcularModa(lista);
+console.log(calcularModa(lista));
