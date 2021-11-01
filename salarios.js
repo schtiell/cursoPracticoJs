@@ -172,11 +172,9 @@ function obtenerMedianaTop10 (arreglo) {
 
     let countSplice = (arreglo.length * 10) / 100;
 
-    let startSplice = arreglo.length - startSplice;
+    let startSplice = arreglo.length - countSplice;
 
     let salariosColombia = arreglo.splice(startSplice, countSplice);
-
-    console.log(salariosColombia);
 
     let salarios = obtenerMedianaSalarios(salariosColombia);
 
