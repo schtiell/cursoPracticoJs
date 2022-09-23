@@ -1,3 +1,6 @@
+## Respuestas al test de Javascript
+=============
+
 ### 1. Responde las siguientes preguntas
 
 - ¿Qué es una variable y para qué sirve?
@@ -59,20 +62,23 @@ console.log(calcularDIneroReal ( dineroAhorrado, deudas) );
 ```
 
 ## Funciones
+### Funciones:  Responde las siguientes preguntas
 
-1. Funciones:  Responde las siguientes preguntas
+- ¿Que es una función?
 
-- ¿que es una funcion?
 Es un bloque de codigo que realiza una operación especifica y es ejecutado unicamente cuando es instanciado o invocado.
 
 - ¿Cuándo me sirve usar una función en mi código?
+
 Cuando se realiza en multiples ocaciones operaciones con valores constantes o variables, ya que permite la reutilización del codigo.
 
 - ¿Cuál es la diferencia entre parámetros y argumentos de una función?
+
 Un argumento es un valor enviado cuando se realiza el llamado a una función. El parametro es el valor esperado por dicha función el cual es necesario para realizar de manera adecuada su operación.
 
 2. Convierte el siguiente código en una función, pero, cambiando cuando sea necesario las variables constantes por parámetros y argumentos en una función:
 
+```
 const name = "Juan David";
 const lastname = "Castro Gallego";
 const completeName = name + lastname;
@@ -82,7 +88,8 @@ var imprimir = (completeName, nickname) => {
 	console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
 }
 
-imprimir(completeName, nicjname);
+imprimir(completeName, nickname);
+```
 
 Condicionales: Responde las siguientes preguntas
 
